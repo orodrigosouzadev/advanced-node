@@ -17,7 +17,7 @@ export interface SaveFacebookAccountRepository {
   saveWithFacebook: (params: SaveFacebookAccountRepository.Params) => Promise<SaveFacebookAccountRepository.Result>
 }
 
-namespace SaveFacebookAccountRepository {
+export namespace SaveFacebookAccountRepository {
   export type Params = {
     id?: string
     email: string
