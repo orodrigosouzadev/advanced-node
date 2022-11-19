@@ -2,7 +2,7 @@ export interface LoadUserAccountRepository {
   load: (params: LoadUserAccountRepository.Params) => Promise<LoadUserAccountRepository.Result>
 }
 
-namespace LoadUserAccountRepository {
+export namespace LoadUserAccountRepository {
   export type Params = {
     email: string
   }
