@@ -1,3 +1,7 @@
+import './config/module-alias'
+import { app } from '@/main/config/app'
+import { env } from '@/main/config/env'
+
 import 'reflect-metadata'
-import * as dotenv from 'dotenv'
-dotenv.config()
+
+app.listen(env.port, () => console.log(`Server running at http://localhost:${env.port}`))
