@@ -1,8 +1,12 @@
+import * as dotenv from 'dotenv'
+dotenv.config()
+
 export const env = {
   facebookApi: {
-    clientId: process.env.FB_CLIENT_ID ?? '674931970691416',
-    clientSecret: process.env.FB_CLIENT_SECRET ?? '7c2389f57a0b76ba82886316cda6c849'
+    clientId: process.env.FB_CLIENT_ID ?? '',
+    clientSecret: process.env.FB_CLIENT_SECRET ?? '',
+    accessToken: process.env.FB_ACCESS_TOKEN ?? ''
   },
-  port: process.env.PORT ?? 8080,
-  jwtSecret: process.env.JWT_SECRET ?? 's3cr3t_keY@'
+  port: Number(process.env.PORT) ?? 8080,
+  jwtSecret: process.env.JWT_SECRET ?? ''
 }

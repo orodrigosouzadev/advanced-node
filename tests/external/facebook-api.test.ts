@@ -12,12 +12,14 @@ describe('FacebookApi Integration Tests', () => {
   })
 
   test('Should return a Facebook User if token is valid', async () => {
-    const fbUser = await sut.loadUser({ token: 'EAAJl2NhcUVgBAKGCvJRBtJYg3Ei3bY4B7X2mBaG0Rht5yh5XDMcFVgoeiZCjxclilZCx2Dy8btPMF4MINmKXI6INBsmmXLwOQ4sAzSYmEIn0OQobGcPKRXVYvfwTa9qCDZCBGqCZCr9bR3FNFqZAeHl8X7G6fZAgGf4FpWKCsUAIPSafe6uLyHud0OWbE03SAGGbkRUFa92NdY1iMdgqKU' })
+    const token = env.facebookApi.accessToken
+
+    const fbUser = await sut.loadUser({ token })
 
     expect(fbUser).toEqual({
       facebookId: '105125092433119',
-      email: 'rodrigo_czpzrsd_teste@tfbnw.net',
-      name: 'Rodrigo Teste'
+      email: 'rodrigo_askpxdu_dev@tfbnw.net',
+      name: 'Rodrigo Dev'
     })
   })
 
